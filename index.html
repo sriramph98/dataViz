@@ -1,46 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- DM Mono Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Starter HTML</title>
+    <title>Responsive Web Design</title>
     <style>
+        /* Inter Display Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
+
+        p {
+            font-size: 24px;
+            line-height: 36px;
+            color: rgba(0, 0, 0, 0.8);
         }
-        main {
-            padding: 1rem;
-        }
+
+        header,
         footer {
-            background-color: #333;
+            background-color: #fff;
             color: #fff;
-            padding: 1rem;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        .defaultPadding {
+            padding: 2em 4em;
+        }
+
+        main {
+            background-color: #fff;
+        }
+
+        h1,
+        h2 {
+            text-align: left;
+            color: #000000;
+        }
+
+        /* Numbers */
+        h3 {
+            text-align: left;
+            color: rgba(0, 0, 0, 1);
+            font-size: 36px;
+            font-family: 'DM Mono', monospace;
+        }
+
+        /* Label */
+        h4 {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 15px;
+            text-align: left;
+        }
+
+        /* Caption */
+        h5 {
+            padding: 1em;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 2em;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            text-align: left;
+            flex: 1 1 calc(33.333% - 2em);
+            /* Adjust the flex-basis and margin */
+        }
+
+        .embed-container {
+            text-align: center;
+        }
+
+        .viewportHeight {
+            height: 100vh;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.6)
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+
+                align-items: flex-start;
+            }
+
+            .stat {
+                margin-bottom: 1rem;
+
+            }
+
+            .defaultPadding {
+                padding: 1em 2em;
+            }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Title</h1>
-    </header>
-    <main>
-        <h2>Subheading</h2>
-        <p>This is a basic starter HTML file to help you get started with your web development project.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
+    <section>
+        <div>
+            <div class="defaultPadding">
+                <h1>Customer Insights</h1>
+                <p>Discover comprehensive data on customer counts for various utilities across different counties.
+                    <br>This
+                    interactive display provides a detailed view of utility service distribution.
+                </p>
+            </div>
+
+            <div class="stats-container defaultPadding">
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 1</h4>
+                </div>
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 2</h4>
+                </div>
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 3</h4>
+                </div>
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 1</h4>
+                </div>
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 2</h4>
+                </div>
+                <div class="stat">
+                    <h3>10%</h3>
+                    <h4>Stat 3</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Viz Embed -->
+        <div class="embed-container defaultPadding">
+            <div class='tableauPlaceholder' id='viz1720736118424' style='position: relative'>
+                <noscript><a href='#'><img
+                            alt='Is Your County Obese? Select your county to see how it compares with other counties in the country'
+                            src='https://public.tableau.com/static/images/Du/Dummy_17207360904900/Obesity/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Dummy_17207360904900/Obesity' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Du/Dummy_17207360904900/Obesity/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1720736118424');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '827px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+
+            <h5>Customer insights by County. Visualized using Tableau</h5>
+            <!-- Data Viz Embed -->
+        </div>
+
+    </section>
+
+    <footer class="footer defaultPadding">
+        <p> Footer</p>
     </footer>
 </body>
+
 </html>
